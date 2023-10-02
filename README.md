@@ -57,6 +57,8 @@ docker run --platform linux/amd64 --rm -v $(pwd)/supervisor-conf-d:/etc/supervis
 
 Once the docker shell opens, run `ctwm &` to start the desktop. Of course, replace this with other appropriate window manager commands.
 
+Once started, you can use a VNC client to connect to the running X11 display. I used `tigervnc` to do this. On the mac, you can `brew install tigervnc-viewer` to get the client. Since X11Vnc is started without a password, some generic VNC clients may not work. TigerVNC supports connecting without a password. Of course, we can easily modify the supervisor scripts to start X11VNC with a password and then get the system to work reliably with all VNC clients.
+
 ## Known Issues
 
 `cyclonedds` has issues with this setup. Refer to
