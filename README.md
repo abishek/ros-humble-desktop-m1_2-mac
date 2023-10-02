@@ -9,6 +9,18 @@ The key reasons to do this are follows:
 - ability to run gazebo and rviz GUI interfaces
 - ability to run x86_64 images on the M1/M2 mac reliably.
 
+## Issues with X11 and M1/M2 Macs
+
+I initially used this gist: https://gist.github.com/cschiewek/246a244ba23da8b9f0e7b11a68bf3285 to setup Xquartz based setup. However, Xquartz is unable to support rviz2. The relevant discussions are here:
+
+- https://github.com/XQuartz/XQuartz/issues/144
+- https://github.com/ros2/rviz/issues/929
+
+## Inspiration (read: copied from)
+
+https://github.com/bwingo47/docker_envs/tree/mac_arm_dev/mac_env
+
+
 ## Build
 
 We need the following mandatory arguments to build the image. 
@@ -49,7 +61,7 @@ Once the docker shell opens, run `ctwm &` to start the desktop. Of course, repla
 
 `cyclonedds` has issues with this setup. Refer to
 
-https://github.com/sea-bass/turtlebot3_behavior_demos/issues/37
-https://github.com/ros2/rmw_cyclonedds/issues/273
+- https://github.com/sea-bass/turtlebot3_behavior_demos/issues/37
+- https://github.com/ros2/rmw_cyclonedds/issues/273
 
 for details.
